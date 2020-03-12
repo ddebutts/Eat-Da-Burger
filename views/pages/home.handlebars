@@ -1,0 +1,14 @@
+<h1>{{title}}</h1>
+
+{{#each burgers}}
+<div>
+    {{burger_name}}
+
+    {{#if devoured}}: Devored {{else}} Ready to Eat! {{/if}}
+
+    <form action="/api/change/{{id}}" method="post">
+        <input type="hidden" name="devoured" value="{{#if devoured}} 0 {{else}} 1 {{/if}}">
+        <input type="submit" value="{{#if devoured}} Order More {{else}} Eat! {{/if}}">
+    </form>
+</div>
+{{/each}}
