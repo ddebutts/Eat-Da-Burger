@@ -23,14 +23,6 @@ router.get("/id/:id", async function (req, res) {
     } catch (error) {
         console.log(error)
     }
-    // Burger.findById(req.params.id)
-    //     .then(function (data) {
-    //         console.log(data)
-    //         res.render("pages/home")
-    //     })
-    //     .catch(function (err) {
-    //         console.log(err)
-    //     })
 })
 router.get("/name/:name", async function (req, res) {
     try {
